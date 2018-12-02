@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>设备监控平台</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script type="text/javascript" src="layui/layui.js"></script>
+	</head>
+	<style>
+		body{
+			background: url(images/project/bg.png)   no-repeat;
+			background-size:cover ;
+		}
+		header{
+			background: url(images/equipment/header.png)   no-repeat center center;
+			background-size: 100% 100%;
+			height: 75px;
+			width: 100%;
+		}
+		#main{
+			margin:  10px 40px;
+		}
+		/*.equ-left-top{
+			background: url(images/equipment/td2.png) no-repeat center center;
+			background-size: 100% 100%;
+			height: 200px;
+			margin:0px 5px;
+			position: relative;
+		}*/
+		.equ-left-foot{
+			background: url(images/equipment/td2.png) no-repeat center center;
+			background-size: 100% 100%;
+			height: 680px;
+			margin:40px 5px 0px;
+			position: relative;
+		}
+		.equ-center-bottom{
+			background: url(images/equipment/td2.png) no-repeat center center;
+			background-size: 100% 100%;
+			height: 240px;
+			margin:20px 10px 0px;
+			position: relative;
+		}
+		
+		.equ-center-top{
+			background: url(images/equipment/td2.png) no-repeat center center;
+			background-size: 100% 100%;
+			height: 190px;
+			margin:10px;
+			position: relative;
+		}
+		
+		.equ-center-body{
+			background: url(images/equipment/td2.png) no-repeat center center;
+			background-size: 100% 100%;
+			height:200px;
+			margin:20px 10px;
+			position: relative;
+		}
+		
+		.equ-right-top{
+			background: url(images/equipment/td2.png) no-repeat center center;
+			background-size: 100% 100%;
+			height: 200px;
+			width: 100%;
+			margin: 5px;
+			position: relative;
+			margin: 40px 5px 20px 5px;
+		}
+		.equ-right-center{
+			background: url(images/equipment/td2.png) no-repeat center center;
+			background-size: 100% 100%;
+			height: 200px;
+			width: 100%;
+			margin: 20px 5px;
+			position: relative;
+			margin: 20px 5px 20px 5px;
+		}
+		.equ-right-bottom{
+			background: url(images/equipment/td2.png) no-repeat center center;
+			background-size: 100% 100%;
+			height: 240px;
+			margin: 0px 5px;
+			position: relative;
+			width: 100%;
+		}
+		.equ-flow-top{
+			background: url(images/equipment/tdtop.png) no-repeat center center;
+			background-size: 100% 100%;
+			height: 32px;
+			width: 155px;
+			position:absolute;
+			transform:translate(-50%);
+			top:-16px;
+			left: 50%;
+			text-align: center;
+			z-index: 99;
+		}
+		.top-span{
+			color: #FFFFFF;
+			font-size: 16px;
+			line-height: 32px;
+		}
+		#nav{
+			background: url(images/equipment/nav.png) no-repeat center center;
+			background-size: 100% 100%;
+			width: 100%;
+			height: 40px;
+			text-align: center;
+		}
+		#nav >ul{
+			width: 200px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#nav >ul >li a{
+			color:#FFF9EC;
+			line-height: 40px;
+			display: block;
+			float: left;
+			margin: 0px 10px;
+			font-size: 18px;
+		}
+		#nav >ul >li a:hover{
+			color: #00F7DE;
+			font-weight:bold;
+		}
+	</style>
+	<body>
+		<header> 
+			</header>
+		<div id="main">
+			<div class="layui-row">
+				<div class="layui-col-xs3 layui-col-sm3 layui-col-md3 layui-col-lg3">
+					<aside>
+					<!--<div class="equ-left-top">
+						<div class="equ-flow-top">
+							<span class="top-span">设备信息 </span>
+						</div>
+						
+					</div>-->
+					<div class="equ-left-foot">
+						<div class="equ-flow-top">
+							<span class="top-span">指标列表 </span>
+						</div>
+					</div>
+				</aside>
+					
+				</div>
+				
+				<div class="layui-col-xs6 layui-col-sm6 layui-col-md6 layui-col-lg6">
+					
+					<div id="nav">
+						<ul> 
+						 <li><a href="#" style="color: #00F7DE;font-weight:bold;">设备监控</a></li>
+						 <li><a href="#">项目分析</a></li>
+						</ul>
+					</div>
+					
+					<div class="equ-center-top">
+					</div>
+					
+					<div class="equ-center-body">
+					</div>
+					
+					<div class="equ-center-bottom">
+					</div>
+					
+				</div>
+				
+				<div class="layui-col-xs3 layui-col-sm3 layui-col-md3 layui-col-lg3">
+					
+					<aside>
+					<div class="equ-right-top">
+						<div class="equ-flow-top">
+							<span class="top-span">指标列表 </span>
+						</div>
+					</div>
+					<div class="equ-right-center">
+						<div class="equ-flow-top">
+							<span class="top-span">指标列表 </span>
+						</div>
+					</div>
+					<div class="equ-right-bottom">
+						<div class="equ-flow-top">
+							<span class="top-span">报警信息 </span>
+						</div>
+					</div>
+				</aside>
+				</div>
+			</div>
+			
+			
+		<div id="lefttree"
+			style="text-align: center; position: absolute; position: absolute; left: -250px; top: 50%; 
+			transform: translate(0%, -50%); width: 250px; background: url(images/equipment/left_bg4.png);
+			 background-position: center center; background-repeat: no-repeat; background-size: 100% 100%">
+			<div id="left_selection"
+				style="position: absolute; left: 246px; top: 50%; transform: translate(0%, -50%);">
+				<a href="javascript:void(0);"><img width="30px"
+					src="images/equipment/list.png"></a>
+			</div>
+			<div id="khzz" style="padding-top: 10px; padding-bottom: 20px;">
+				<lable style="color:#457892;font-size:25px">项目设备</lable>
+				<ul id="treeLeft" class="ztree" style="margin: 10px 10px auto 10px;"></ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				var taskId = null;
+				$('#khzz').on('mouseleave', function() {
+					taskId = setTimeout(function() {
+						if(isHiden){
+							taskId = $('#left_selection').click();
+						}
+					}, 3000);
+				});
+				$('#khzz').on('mouseover', function() {
+					clearTimeout(taskId);
+				})
+			});
+			window.isHiden = false; /*控制切换菜单*/
+		  $('#left_selection').click(function() {
+							if (isHiden) {
+								$('#lefttree').animate({left : '-=250px'});//菜单块向右移动
+							} else {
+								$('#lefttree').animate({left : '+=250px'}); //菜单块向左移动
+							}
+							isHiden = !isHiden;
+						});
+		</script>
+			
+		</div>
+		
+	</body>
+</html>
